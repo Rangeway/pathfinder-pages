@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Pathfinder Rewards is a Jekyll-powered static website for a loyalty program serving EV drivers. Hosted on GitHub Pages at pathfinderrewards.com.
+Pathfinder Rewards is a Jekyll-powered static website for a loyalty program serving EV drivers. Hosted on the Rangeway VPS at pathfinder.rangeway.co.
 
 ## Development Commands
 
@@ -19,7 +19,7 @@ bundle exec jekyll build
 bundle exec jekyll serve
 ```
 
-**Deployment:** Automatic via GitHub Pages on push to `main` branch.
+**Deployment:** Pushes to `main` build the site in GitHub Actions and publish it to the `deploy-dist` branch. The Rangeway VPS pulls that branch on its deployment timer and serves it with Nginx. See `DEPLOY.md`.
 
 ## Architecture
 

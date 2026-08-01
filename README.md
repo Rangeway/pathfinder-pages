@@ -30,39 +30,11 @@ bundle exec jekyll serve
 
 The site will be available at `http://localhost:4000`
 
-## Deployment to GitHub Pages
+## Deployment
 
-### Initial Setup
-1. Push this repository to GitHub
-2. Go to repository Settings > Pages
-3. Set Source to "Deploy from a branch"
-4. Select branch: `main`
-5. Select folder: `/ (root)`
-6. Save
+The production site is [pathfinder.rangeway.co](https://pathfinder.rangeway.co). Pushes to `main` trigger GitHub Actions, which builds Jekyll and publishes the result to `deploy-dist`. The Rangeway VPS pulls that branch on its recurring deployment timer and serves the files with Nginx.
 
-### Custom Domain Setup (pathfinderrewards.com)
-1. In repository Settings > Pages, set Custom domain to: `pathfinderrewards.com`
-2. Check "Enforce HTTPS"
-3. Add DNS records at your domain provider:
-   - Type: CNAME
-   - Name: pathfinder
-   - Value: [your-github-username].github.io
-   - TTL: 3600 (or default)
-
-### Deploying Updates
-```bash
-# Make changes to the site
-# Test locally with: bundle exec jekyll serve
-
-# Commit changes
-git add .
-git commit -m "Your commit message"
-
-# Push to GitHub
-git push origin main
-```
-
-GitHub Pages will automatically build and deploy your changes within a few minutes.
+See [DEPLOY.md](DEPLOY.md) for the server paths and operational details.
 
 ## File Structure
 

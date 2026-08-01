@@ -4,7 +4,7 @@
 # Site settings
 title: Pathfinder Rewards | Earn Rewards Everywhere You Charge
 description: "Pathfinder Rewards is a loyalty program for EV drivers. Earn credits at participating charging locations nationwide. Open to all EV drivers."
-url: "https://pathfinderrewards.com"
+url: "https://pathfinder.rangeway.co"
 baseurl: ""
 
 # Organization info
@@ -33,6 +33,9 @@ plugins:
 
 # Exclude from build
 exclude:
+  - CLAUDE.md
+  - CNAME
+  - DEPLOY.md
   - Gemfile
   - Gemfile.lock
   - README.md
