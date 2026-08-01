@@ -1,0 +1,50 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 60 60">
+                        <rect x="8" y="8" width="44" height="44" rx="10" ry="10" stroke="#ffffff" stroke-width="4" fill="none"/>
+                        <path d="M30 14 L30 23 M30 37 L30 46 M14 30 L23 30 M37 30 L46 30" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 18 L22 22 M38 38 L42 42 M42 18 L38 22 M22 38 L18 42" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+                        <circle cx="30" cy="30" r="7" fill="#f4a855"/>
+                    </svg>
+                    <span class="footer-logo-text">Pathfinder Rewards</span>
+                </div>
+                <p>Earn rewards everywhere you charge. A loyalty program for EV drivers at participating locations nationwide.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#tiers">Membership Tiers</a>
+                <a href="#partners">For Partners</a>
+                <a href="#benefits">Benefits</a>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>{{ site.organization.address.street }}<br>
+                {{ site.organization.address.city }}, {{ site.organization.address.state }} {{ site.organization.address.zip }}</p>
+                <a href="tel:{{ site.organization.phone }}">{{ site.organization.phone }}</a>
+                <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
+                <div class="footer-social">
+                    <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.organization.name }}. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+{% if page.script %}
+<script src="{{ '/assets/js/' | append: page.script | append: '.js' | relative_url }}"></script>
+{% endif %}

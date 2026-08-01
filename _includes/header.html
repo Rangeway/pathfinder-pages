@@ -1,0 +1,82 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ site.organization.name }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta name="theme-color" content="#f4a855">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ site.url }}/images/baker-exterior3.jpg">
+    <meta property="og:site_name" content="Pathfinder Rewards">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/images/baker-exterior3.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Raleway:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/pathfinder-assets/pathfinder-mark-favicon-dark-32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/pathfinder-assets/pathfinder-mark-favicon-dark-16.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="128x128" href="{{ '/pathfinder-assets/pathfinder-mark-dark-128.png' | relative_url }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.stylesheet %}
+    <link rel="stylesheet" href="{{ '/assets/css/' | append: page.stylesheet | append: '.css' | relative_url }}">
+    {% endif %}
+
+    <!-- Analytics -->
+    <script src="https://tinylytics.app/embed/F1ERjyzsMeJ7md3L9Ldf.js" defer></script>
+</head>
+
+<!-- Skip Link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="{{ '/' | relative_url }}" class="logo-link">
+                <!-- Pathfinder Mark - uses currentColor for theme support -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 60 60">
+                    <rect x="8" y="8" width="44" height="44" rx="10" ry="10" stroke="currentColor" stroke-width="4" fill="none"/>
+                    <path d="M30 14 L30 23 M30 37 L30 46 M14 30 L23 30 M37 30 L46 30" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                    <path d="M18 18 L22 22 M38 38 L42 42 M42 18 L38 22 M22 38 L18 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+                    <circle cx="30" cy="30" r="7" fill="#f4a855"/>
+                </svg>
+                <span class="logo-text">Pathfinder Rewards</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#tiers" class="nav-link">Tiers</a>
+                <a href="#partners" class="nav-link">For Partners</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
