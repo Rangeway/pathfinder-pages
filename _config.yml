@@ -2,28 +2,29 @@
 # Jekyll configuration for GitHub Pages
 
 # Site settings
-title: Pathfinder Rewards | Earn Rewards Everywhere You Charge
-description: "Pathfinder Rewards is a loyalty program for EV drivers. Earn credits at participating charging locations nationwide. Open to all EV drivers."
+title: Pathfinder Rewards | Rewards for the Road Ahead
+description: "Pathfinder Rewards is Rangeway's loyalty program in development for EV drivers and participating destinations."
 url: "https://pathfinder.rangeway.co"
 baseurl: ""
 
 # Organization info
 organization:
-  name: Pathfinder Rewards
-  tagline: "Pathfinder Rewards - Earn Rewards Everywhere You Charge"
-  email: hello@pathfinderrewards.com
+  name: Rangeway Energy, Inc.
+  tagline: "Pathfinder Rewards: rewarding the road between here and there."
+  email: hello@rangeway.co
   phone: "(650) 420-6300"
   phone_raw: "6504206300"
   address:
-    street: "2661 Market Street #87587"
+    street: "2661 Market Street, STE 85787"
     city: "San Francisco"
     state: "CA"
     zip: "94114"
 
 # Social media
 social:
-  twitter: "https://x.com/pathfinderrewards"
-  instagram: "https://instagram.com/pathfinderrewards"
+  instagram: "https://www.instagram.com/RangewayEV/"
+  linkedin: "https://www.linkedin.com/company/rangewayenergy/"
+  x: "https://x.com/RangewayEV"
 
 # Build settings
 markdown: kramdown

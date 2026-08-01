@@ -1,64 +1,43 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
+const sidebar = document.getElementById('sidebar');
+const menuToggle = document.getElementById('menuToggle');
+const sections = document.querySelectorAll('.main-content .section');
+const playbookNavLinks = document.querySelectorAll('.sidebar .nav-link');
 
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+const setSidebarOpen = (open) => {
+    if (!sidebar || !menuToggle) return;
+    sidebar.classList.toggle('active', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close playbook contents' : 'Open playbook contents');
+    menuToggle.textContent = open ? 'Close' : 'Contents';
+};
 
-            // Close mobile menu if open
-            if (window.innerWidth <= 1024) {
-                sidebar.classList.remove('active');
-            }
-        }
-    });
-});
-
-// Active section highlighting
-const sections = document.querySelectorAll('.section');
-const navLinks = document.querySelectorAll('.nav-link');
-
-function updateActiveLink() {
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 150)) {
-            current = section.getAttribute('id');
-        }
+if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', () => {
+        setSidebarOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-        }
+    playbookNavLinks.forEach((link) => link.addEventListener('click', () => setSidebarOpen(false)));
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setSidebarOpen(false);
+    });
+    document.addEventListener('click', (event) => {
+        if (window.innerWidth > 900 || !sidebar.classList.contains('active')) return;
+        if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) setSidebarOpen(false);
     });
 }
 
-window.addEventListener('scroll', updateActiveLink);
-updateActiveLink(); // Initial call
+if ('IntersectionObserver' in window && sections.length) {
+    const activeObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            playbookNavLinks.forEach((link) => {
+                const active = link.getAttribute('href') === `#${entry.target.id}`;
+                link.classList.toggle('active', active);
+                if (active) link.setAttribute('aria-current', 'true');
+                else link.removeAttribute('aria-current');
+            });
+        });
+    }, { rootMargin: '-20% 0px -68% 0px', threshold: 0 });
 
-// Mobile menu toggle
-const menuToggle = document.getElementById('menuToggle');
-const sidebar = document.getElementById('sidebar');
-
-menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-});
-
-// Close sidebar when clicking outside on mobile
-document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 1024 &&
-        !sidebar.contains(e.target) &&
-        !menuToggle.contains(e.target) &&
-        sidebar.classList.contains('active')) {
-        sidebar.classList.remove('active');
-    }
-});
+    sections.forEach((section) => activeObserver.observe(section));
+}

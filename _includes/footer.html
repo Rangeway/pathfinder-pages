@@ -1,45 +1,65 @@
-<footer class="footer">
+<footer class="footer" id="site-footer">
     <div class="container">
-        <div class="footer-grid">
-            <!-- Brand -->
-            <div class="footer-section">
-                <div class="footer-logo">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a class="footer-logo" href="{{ '/' | relative_url }}" aria-label="Pathfinder Rewards home">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 60 60">
-                        <rect x="8" y="8" width="44" height="44" rx="10" ry="10" stroke="#ffffff" stroke-width="4" fill="none"/>
-                        <path d="M30 14 L30 23 M30 37 L30 46 M14 30 L23 30 M37 30 L46 30" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M18 18 L22 22 M38 38 L42 42 M42 18 L38 22 M22 38 L18 42" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+                        <rect x="8" y="8" width="44" height="44" rx="10" ry="10" stroke="currentColor" stroke-width="4" fill="none"/>
+                        <path d="M30 14 L30 23 M30 37 L30 46 M14 30 L23 30 M37 30 L46 30" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 18 L22 22 M38 38 L42 42 M42 18 L38 22 M22 38 L18 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
                         <circle cx="30" cy="30" r="7" fill="#f4a855"/>
                     </svg>
-                    <span class="footer-logo-text">Pathfinder Rewards</span>
+                    <span>Pathfinder Rewards</span>
+                </a>
+                <p class="footer-tag">Rewarding the road between here and there.</p>
+                <p class="footer-note">A loyalty program in development by Rangeway Energy, Inc.</p>
+                <div class="footer-social" aria-label="Follow Rangeway">
+                    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Rangeway on Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="Rangeway on LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="7.5" cy="8" r="1" fill="currentColor" stroke="none"/>
+                            <path d="M7.5 11v6M11 17v-6M11 13.5c.8-1.6 2-2.5 3.7-2.5 2.1 0 3.3 1.4 3.3 4v2"/>
+                        </svg>
+                    </a>
+                    <a href="{{ site.social.x }}" target="_blank" rel="noopener noreferrer" aria-label="Rangeway on X">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M5 4l14 16M19 4L5 20"/>
+                        </svg>
+                    </a>
                 </div>
-                <p>Earn rewards everywhere you charge. A loyalty program for EV drivers at participating locations nationwide.</p>
             </div>
 
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#tiers">Membership Tiers</a>
-                <a href="#partners">For Partners</a>
-                <a href="#benefits">Benefits</a>
-            </div>
-
-            <!-- Contact -->
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>{{ site.organization.address.street }}<br>
-                {{ site.organization.address.city }}, {{ site.organization.address.state }} {{ site.organization.address.zip }}</p>
-                <a href="tel:{{ site.organization.phone }}">{{ site.organization.phone }}</a>
-                <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
-                <div class="footer-social">
-                    <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <div class="footer-cols">
+                <div>
+                    <h3>Explore</h3>
+                    <a href="/#how-it-works">How It Works</a>
+                    <a href="/#tiers">Membership Tiers</a>
+                    <a href="/#partners">For Partners</a>
+                </div>
+                <div>
+                    <h3>Rangeway</h3>
+                    <a href="https://rangeway.co/network">The Network</a>
+                    <a href="https://rangeway.co/our-story">Our Story</a>
+                    <a href="https://rangeway.co/contact">Contact</a>
+                </div>
+                <div>
+                    <h3>Connect</h3>
+                    <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
+                    <a href="tel:+{{ site.organization.phone_raw }}">{{ site.organization.phone }}</a>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.organization.name }}. All rights reserved.</p>
+            <p>&copy; {{ 'now' | date: "%Y" }} Rangeway Energy, Inc. All rights reserved.</p>
+            <p>Pathfinder terms, benefits, and availability are subject to change before launch.</p>
         </div>
     </div>
 </footer>

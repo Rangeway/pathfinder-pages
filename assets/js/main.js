@@ -1,49 +1,61 @@
-/**
- * Pathfinder Rewards - Main JavaScript
- * Minimal, focused functionality
- */
-
-// Mobile Menu Toggle
+const nav = document.querySelector('[data-nav]');
 const mobileToggle = document.querySelector('.mobile-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
+const setMenuOpen = (open) => {
+    if (!mobileToggle || !navMenu) return;
+    navMenu.classList.toggle('active', open);
+    nav?.toggleAttribute('data-open', open);
+    mobileToggle.setAttribute('aria-expanded', String(open));
+    mobileToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
+};
+
+if (nav) {
+    const updateNav = () => nav.classList.toggle('is-scrolled', window.scrollY > 40);
+    updateNav();
+    window.addEventListener('scroll', updateNav, { passive: true });
+}
+
 if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        setMenuOpen(mobileToggle.getAttribute('aria-expanded') !== 'true');
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-            navMenu.classList.remove('active');
-        }
+    navMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMenuOpen(false));
     });
 
-    // Close menu when clicking a link
-    navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setMenuOpen(false);
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) setMenuOpen(false);
     });
 }
 
-// Smooth scroll for anchor links (with navbar offset)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-        const href = anchor.getAttribute('href');
-        if (href === '#') return;
-
-        const target = document.querySelector(href);
-        if (target) {
-            e.preventDefault();
-            const navbar = document.querySelector('.navbar');
-            const offset = navbar ? navbar.offsetHeight + 20 : 80;
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (event) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
+
+const revealElements = document.querySelectorAll('[data-reveal]');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (revealElements.length && !reducedMotion && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('reveal-ready');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+}

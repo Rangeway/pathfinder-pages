@@ -4,8 +4,9 @@ Jekyll-powered site for Pathfinder Rewards, Rangeway's loyalty program.
 
 ## Site Structure
 
-- **index.html** - Main Pathfinder Rewards landing page with membership tiers
-- **playbook.html** - Comprehensive internal playbook for the rewards program
+- **index.html** - Public Pathfinder Rewards program-preview landing page
+- **playbook.html** - No-index working playbook for the rewards-program concept
+- **beta/index.html** - Redirect from the retired beta preview to the homepage
 - **_layouts/** - Jekyll layout templates
 - **assets/** - CSS and JavaScript files
 - **_config.yml** - Jekyll configuration
@@ -59,16 +60,16 @@ pathfinder-pages/
 ## Site Features
 
 ### Index Page
-- Membership tier showcase (Explorer, Voyager, Pioneer, Trailblazer)
-- Benefits overview
-- Call-to-action sections
-- Responsive design
+- Current program-preview positioning with clear pre-launch language
+- Proposed Explorer, Voyager, Pioneer, and Trailblazer tier structure
+- Benefits and partner overview
+- Responsive Rangeway-aligned visual system
 
 ### Playbook Page
 - Comprehensive program documentation
 - Sidebar navigation
 - Mobile-friendly menu
-- Detailed tier breakdowns
+- Detailed working tier breakdowns
 - Financial projections
 - Marketing guidelines
 - Operational procedures

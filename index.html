@@ -1,236 +1,225 @@
 ---
 layout: default
-title: "Pathfinder Rewards | Earn Rewards Everywhere You Charge"
-description: "Pathfinder Rewards is a loyalty program for EV drivers. Earn credits at participating charging locations nationwide. Open to all EV drivers."
+title: "Pathfinder Rewards | Rewards for the Road Ahead"
+description: "Preview Pathfinder Rewards, Rangeway's loyalty program in development for EV drivers and participating destinations."
 ---
 
 <main id="main-content">
-    <!-- Hero Section -->
+    <!-- HERO: A giant Pathfinder compass sits over a sunlit Rangeway destination, turning the loyalty mark into a place marker. -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 60 60">
-                    <rect x="8" y="8" width="44" height="44" rx="10" ry="10" stroke="#ffffff" stroke-width="4" fill="none"/>
-                    <path d="M30 14 L30 23 M30 37 L30 46 M14 30 L23 30 M37 30 L46 30" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
-                    <path d="M18 18 L22 22 M38 38 L42 42 M42 18 L38 22 M22 38 L18 42" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
-                    <circle cx="30" cy="30" r="7" fill="#f4a855"/>
-                </svg>
+        <div class="container hero-grid">
+            <div class="hero-copy" data-reveal>
+                <p class="status-pill"><span></span> Program preview</p>
+                <p class="eyebrow">Pathfinder Rewards</p>
+                <h1>Rewards for the<br><em>road ahead.</em></h1>
+                <p class="hero-lede">A loyalty program being developed by Rangeway for EV drivers who make the journey, and the destinations that make every stop worth taking.</p>
+                <div class="hero-actions">
+                    <a href="#program" class="btn btn-primary">
+                        Explore the program
+                        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg>
+                    </a>
+                    <a href="#partners" class="btn btn-secondary">For destination partners</a>
+                </div>
+                <p class="hero-fineprint">Pathfinder is in development. Program terms and availability may change before launch.</p>
             </div>
-            <h1>Earn Rewards <span class="highlight">Everywhere</span> You Charge</h1>
-            <p>Pathfinder Rewards is a loyalty program for EV drivers at participating charging locations nationwide. Open to everyone.</p>
-            <div class="hero-buttons">
-                <a href="#partners" class="btn btn-primary">Become a Partner</a>
-                <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>How It Works</h2>
-                <p>Start earning rewards in three simple steps</p>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Sign Up Free</h3>
-                    <p>Create your Pathfinder Rewards account at any participating location. It's free to join.</p>
+            <div class="hero-visual" data-reveal>
+                <img src="{{ '/images/waystation-exterior4-pch.jpg' | relative_url }}" alt="A Rangeway charging destination along a coastal route">
+                <div class="hero-mark" aria-hidden="true">
+                    <img src="{{ '/pathfinder-assets/pathfinder-mark-white.svg' | relative_url }}" alt="">
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Visit Partner Locations</h3>
-                    <p>Use your membership at any Pathfinder partner location nationwide - EV charging, dining, shopping, and more.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Earn Credits & Rewards</h3>
-                    <p>Earn credits on every visit. Unlock higher tiers and exclusive benefits the more you use Pathfinder.</p>
-                </div>
+                <p class="image-caption"><span>01</span> The stop is part of the journey.</p>
             </div>
         </div>
     </section>
 
-    <!-- Membership Tiers -->
-    <section id="tiers" class="tiers">
+    <section class="section section-warm" id="how-it-works">
         <div class="container">
-            <div class="section-header">
-                <h2>Membership Tiers</h2>
-                <p>The more you charge, the more you earn. Progress through tiers for better rewards.</p>
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">How it works</p>
+                <h2>Simple by design.<br>Meaningful by mile.</h2>
+                <p>Pathfinder is designed to recognize repeat journeys without turning every stop into another transaction to manage.</p>
             </div>
-            <div class="tiers-grid">
-                <!-- Explorer -->
-                <div class="tier-card explorer">
-                    <div class="tier-icon"><i class="fa-solid fa-compass"></i></div>
-                    <h3 class="tier-name">Explorer</h3>
-                    <p class="tier-tagline">Start your journey</p>
-                    <div class="tier-credit">0%</div>
-                    <div class="tier-credit-label">Credit Back</div>
-                    <ul class="tier-benefits">
-                        <li>Earn points at partner locations</li>
-                        <li>Member-only offers</li>
-                        <li>Digital membership card</li>
-                    </ul>
-                    <span class="tier-qualify">Automatic on signup</span>
-                </div>
 
-                <!-- Voyager -->
-                <div class="tier-card voyager">
-                    <div class="tier-icon"><i class="fa-solid fa-route"></i></div>
-                    <h3 class="tier-name">Voyager</h3>
-                    <p class="tier-tagline">Regular traveler</p>
-                    <div class="tier-credit">5%</div>
-                    <div class="tier-credit-label">Credit Back</div>
-                    <ul class="tier-benefits">
-                        <li>All Explorer benefits</li>
-                        <li>$25 birthday credit</li>
-                        <li>Priority support</li>
-                    </ul>
-                    <span class="tier-qualify">10+ visits/year</span>
-                </div>
+            <ol class="steps" data-reveal>
+                <li>
+                    <span class="step-number">01</span>
+                    <h3>Join at no cost</h3>
+                    <p>Enroll when the program becomes available. Explorer status begins with your first qualifying charging session.</p>
+                </li>
+                <li>
+                    <span class="step-number">02</span>
+                    <h3>Charge with Rangeway</h3>
+                    <p>Qualifying sessions and energy use build toward the next Pathfinder tier across participating locations.</p>
+                </li>
+                <li>
+                    <span class="step-number">03</span>
+                    <h3>Unlock recognition</h3>
+                    <p>Higher tiers are planned to add charging credits, destination perks, experiences, and more personal service.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
 
-                <!-- Pioneer -->
-                <div class="tier-card pioneer">
-                    <div class="tier-icon"><i class="fa-solid fa-mountain-sun"></i></div>
-                    <h3 class="tier-name">Pioneer</h3>
-                    <p class="tier-tagline">Elite status</p>
-                    <div class="tier-credit">10%</div>
-                    <div class="tier-credit-label">Credit Back</div>
-                    <ul class="tier-benefits">
-                        <li>All Voyager benefits</li>
-                        <li>$100 annual bonus</li>
-                        <li>Premium lounge access</li>
-                        <li>Priority charging</li>
-                    </ul>
-                    <span class="tier-qualify">25+ visits/year</span>
-                </div>
-
-                <!-- Trailblazer -->
-                <div class="tier-card trailblazer">
-                    <div class="tier-icon"><i class="fa-solid fa-gem"></i></div>
-                    <h3 class="tier-name">Trailblazer</h3>
-                    <p class="tier-tagline">Invite only</p>
-                    <div class="tier-credit">15%</div>
-                    <div class="tier-credit-label">Credit Back</div>
-                    <ul class="tier-benefits">
-                        <li>All Pioneer benefits</li>
-                        <li>$500 annual credit</li>
-                        <li>Exclusive events</li>
-                        <li>Dedicated concierge</li>
-                    </ul>
-                    <span class="tier-qualify">By invitation</span>
-                </div>
+    <section class="section program-section" id="program">
+        <div class="container program-grid">
+            <div class="program-media" data-reveal>
+                <img src="{{ '/images/trailhead-interior1.jpg' | relative_url }}" alt="A warm, hospitality-led interior at a planned Rangeway destination">
+                <p class="image-caption image-caption-light"><span>02</span> More than a charging session.</p>
+            </div>
+            <div class="program-copy" data-reveal>
+                <p class="eyebrow eyebrow-light">The program</p>
+                <h2>Reward the journey,<br>not just the transaction.</h2>
+                <p class="lede">Charging keeps you moving. Hospitality is what makes you want to return.</p>
+                <p>Pathfinder is being built around earned recognition: a free-to-join program where activity, not a paid subscription, advances your status.</p>
+                <ul class="principles">
+                    <li><span>One</span> base charging rate for every guest</li>
+                    <li><span>Earned</span> status through qualifying activity</li>
+                    <li><span>Useful</span> benefits rooted in the destination</li>
+                    <li><span>Human</span> recognition at every tier</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- For Partners -->
-    <section id="partners" class="partners">
+    <section class="section" id="tiers">
         <div class="container">
-            <div class="section-header">
-                <h2>Bring Pathfinder to Your Location</h2>
-                <p>Partner with us to offer Pathfinder Rewards at your charging stations</p>
+            <div class="section-heading section-heading-wide" data-reveal>
+                <div>
+                    <p class="eyebrow">Membership tiers</p>
+                    <h2>Four ways to be<br>recognized.</h2>
+                </div>
+                <p>The current program concept uses annual charging sessions or energy delivered to determine status. Reach either threshold first.</p>
             </div>
 
-            <div class="partner-benefits">
-                <div class="partner-benefit">
-                    <div class="partner-benefit-icon"><i class="fa-solid fa-users"></i></div>
-                    <h3>Customer Loyalty</h3>
-                    <p>Keep customers coming back with rewards they earn at your location.</p>
-                </div>
-                <div class="partner-benefit">
-                    <div class="partner-benefit-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                    <h3>Brand Exposure</h3>
-                    <p>Get featured in the Pathfinder network and reach more EV drivers.</p>
-                </div>
-                <div class="partner-benefit">
-                    <div class="partner-benefit-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h3>Join the Network</h3>
-                    <p>Be part of a growing network of premium charging destinations.</p>
-                </div>
+            <div class="tier-grid" data-reveal>
+                <article class="tier-card">
+                    <div class="tier-topline"><span>01</span><span>Entry</span></div>
+                    <div class="tier-symbol tier-symbol-explorer" aria-hidden="true"></div>
+                    <h3>Explorer</h3>
+                    <p class="tier-threshold">Begins with your first qualifying session</p>
+                    <p class="tier-rate">Member access</p>
+                    <ul>
+                        <li>Digital member status</li>
+                        <li>Member communications and offers</li>
+                        <li>Progress toward earned status</li>
+                    </ul>
+                </article>
+
+                <article class="tier-card">
+                    <div class="tier-topline"><span>02</span><span>Frequent</span></div>
+                    <div class="tier-symbol tier-symbol-voyager" aria-hidden="true"></div>
+                    <h3>Voyager</h3>
+                    <p class="tier-threshold">10–24 sessions or 3,000+ kWh annually</p>
+                    <p class="tier-rate"><strong>5%</strong> charging credit</p>
+                    <ul>
+                        <li>Explorer benefits</li>
+                        <li>Planned birthday recognition</li>
+                        <li>Select destination and partner perks</li>
+                    </ul>
+                </article>
+
+                <article class="tier-card tier-card-featured">
+                    <div class="tier-topline"><span>03</span><span>Elite</span></div>
+                    <div class="tier-symbol tier-symbol-pioneer" aria-hidden="true"></div>
+                    <h3>Pioneer</h3>
+                    <p class="tier-threshold">25–49 sessions or 7,500+ kWh annually</p>
+                    <p class="tier-rate"><strong>10%</strong> charging credit</p>
+                    <ul>
+                        <li>Voyager benefits</li>
+                        <li>Planned annual recognition</li>
+                        <li>Enhanced destination experiences</li>
+                    </ul>
+                </article>
+
+                <article class="tier-card tier-card-dark">
+                    <div class="tier-topline"><span>04</span><span>By invitation</span></div>
+                    <div class="tier-symbol tier-symbol-trailblazer" aria-hidden="true"></div>
+                    <h3>Trailblazer</h3>
+                    <p class="tier-threshold">Reserved for exceptional community contribution</p>
+                    <p class="tier-rate"><strong>15%</strong> charging credit</p>
+                    <ul>
+                        <li>Pioneer benefits</li>
+                        <li>Exclusive gatherings and previews</li>
+                        <li>More personal recognition</li>
+                    </ul>
+                </article>
             </div>
 
-            <div class="partner-types">
-                <h3>Partner With Us</h3>
-                <div class="partner-icons">
-                    <div class="partner-type">
-                        <i class="fa-solid fa-charging-station"></i>
-                        <span>Charging Networks</span>
-                    </div>
-                    <div class="partner-type">
-                        <i class="fa-solid fa-hotel"></i>
-                        <span>Hotels</span>
-                    </div>
-                    <div class="partner-type">
-                        <i class="fa-solid fa-store"></i>
+            <p class="terms-note" data-reveal><strong>Working program concept.</strong> Thresholds, charging credits, benefits, qualifying activity, status duration, and launch timing remain subject to change.</p>
+        </div>
+    </section>
+
+    <section class="section section-warm benefits-section" id="benefits">
+        <div class="container benefits-grid">
+            <div class="benefits-intro" data-reveal>
+                <p class="eyebrow">Member experience</p>
+                <h2>Benefits that belong<br>to the place.</h2>
+                <p>Pathfinder’s planned benefits extend beyond the plug. The aim is to make the time spent charging more useful, more comfortable, and more connected to the route.</p>
+            </div>
+
+            <div class="benefit-list" data-reveal>
+                <article>
+                    <span>01</span>
+                    <div><h3>Charging credits</h3><p>Earned credits are planned to return value toward future qualifying sessions.</p></div>
+                </article>
+                <article>
+                    <span>02</span>
+                    <div><h3>Destination perks</h3><p>Select locations may include food, drink, lounge, retail, or local partner benefits.</p></div>
+                </article>
+                <article>
+                    <span>03</span>
+                    <div><h3>Recognition</h3><p>Tier milestones, member moments, and a warmer welcome for repeat guests.</p></div>
+                </article>
+                <article>
+                    <span>04</span>
+                    <div><h3>Community access</h3><p>Planned invitations to previews, gatherings, and experiences along the network.</p></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section partners-section" id="partners">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partners-copy" data-reveal>
+                    <p class="eyebrow">For partners</p>
+                    <h2>Turn a charging stop into a reason to return.</h2>
+                    <p class="lede">Pathfinder is also a framework for destinations that want to recognize EV guests and participate in a broader hospitality network.</p>
+                    <p>We’re interested in thoughtful conversations with charging operators, hotels, restaurants, retailers, attractions, and regional brands.</p>
+                    <a class="arrow-link" href="mailto:hello@rangeway.co?subject=Pathfinder%20partner%20conversation">
+                        Start a partner conversation
+                        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg>
+                    </a>
+                </div>
+
+                <div class="partner-visual" data-reveal>
+                    <img src="{{ '/images/waystation-exterior1-shasta.jpg' | relative_url }}" alt="A planned Rangeway Waystation in a mountain landscape">
+                    <div class="partner-categories" aria-label="Potential partner categories">
+                        <span>Charging</span>
+                        <span>Hospitality</span>
+                        <span>Food + drink</span>
                         <span>Retail</span>
-                    </div>
-                    <div class="partner-type">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span>Restaurants</span>
+                        <span>Local experiences</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="partner-cta">
-                <p>Interested in becoming a partner?</p>
-                <a href="mailto:partners@pathfinderrewards.com" class="partner-email">
-                    <i class="fa-solid fa-envelope"></i>
-                    partners@pathfinderrewards.com
+    <section class="closing-section">
+        <div class="container closing-inner" data-reveal>
+            <div>
+                <p class="eyebrow eyebrow-light">Pathfinder Rewards</p>
+                <h2>There’s more to the road<br>than getting there.</h2>
+            </div>
+            <div>
+                <p>Pathfinder is in development. If you’re building a better charging destination or want to know when the program opens, we’d like to hear from you.</p>
+                <a href="mailto:hello@rangeway.co?subject=Pathfinder%20Rewards" class="btn btn-accent">
+                    Get in touch
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg>
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section id="benefits" class="benefits">
-        <div class="container">
-            <div class="section-header">
-                <h2>Member Benefits</h2>
-                <p>Exclusive perks at every tier</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Credits on Every Charge</h3>
-                    <p>Earn credits automatically when you charge at any participating location.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-couch"></i></div>
-                    <h3>Premium Lounges</h3>
-                    <p>Access comfortable lounges at select locations while your vehicle charges.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-clock"></i></div>
-                    <h3>Priority Charging</h3>
-                    <p>Higher tier members get priority access during peak times.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-gift"></i></div>
-                    <h3>Birthday Rewards</h3>
-                    <p>Receive special birthday credits as a Voyager member or above.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-calendar-check"></i></div>
-                    <h3>Annual Bonuses</h3>
-                    <p>Pioneer and Trailblazer members earn annual milestone bonuses.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-star"></i></div>
-                    <h3>Exclusive Events</h3>
-                    <p>Get invites to member-only events and early access to new features.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Join Pathfinder Rewards and start earning at partner locations.</p>
-            <a href="mailto:partners@pathfinderrewards.com" class="btn btn-primary">Partner With Us</a>
         </div>
     </section>
 </main>
