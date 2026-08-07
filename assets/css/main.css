@@ -246,7 +246,8 @@ svg { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: 
 .program-copy .lede { margin-bottom: 22px; color: var(--on-dark); font-size: var(--fs-lede); line-height: 1.55; }
 .program-copy > p:not(.eyebrow):not(.lede) { max-width: 560px; }
 .principles { margin: 38px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.14); }
-.principles li { display: grid; grid-template-columns: 84px 1fr; gap: 24px; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+.principles li { position: relative; display: grid; grid-template-columns: 84px 1fr; gap: 24px; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+.principles li::before { content: ""; position: absolute; top: 12px; bottom: 12px; left: 96px; width: 1px; background: rgba(255,255,255,.18); pointer-events: none; }
 .principles span { color: #f7c27a; font-weight: 700; }
 
 /* Tiers */
@@ -425,6 +426,7 @@ svg { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: 
     .program-media img { aspect-ratio: 4/3; border-radius: 30px 3px 3px 3px; }
     .principles { margin-top: 30px; }
     .principles li { grid-template-columns: 72px 1fr; gap: 16px; padding-block: 15px; }
+    .principles li::before { left: 80px; }
     .tier-grid { grid-template-columns: 1fr; }
     .tier-card:nth-child(n) { min-height: 0; padding: 28px 24px 30px; border-right: 0; border-bottom: 1px solid var(--line-med); }
     .tier-card:last-child { border-bottom: 0; }
